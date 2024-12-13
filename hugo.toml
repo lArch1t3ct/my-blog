@@ -126,3 +126,6 @@ url = "https://github.com/lArch1t3ct"
 name = "linkedin"
 url = "https://www.linkedin.com/in/stavros-gkounis/"
 
+[[params.socialIcons]]
+name = "kofi"
+url = "https://ko-fi.com/larchitect"
