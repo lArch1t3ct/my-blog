@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">Props Object Destructuring | Stavros&#39; Blog</title>
+<meta property="og:title" content="Props Object Destructuring | Stavros&#39; Blog" />
+<meta name="twitter:title" content="Props Object Destructuring | Stavros&#39; Blog" />
+<meta itemprop="name" content="Props Object Destructuring | Stavros&#39; Blog" />
+<meta name="application-name" content="Props Object Destructuring | Stavros&#39; Blog" />
+<meta property="og:site_name" content="Stavros&#39; Blog" />
+
+<meta name="description" content="Welcome to my journey of transitioning from cybersecurity to software development.">
+<meta itemprop="description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta property="og:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta name="twitter:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/my-blog/posts/props-object-destructuring/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-11-27T00:00:00Z />
+    <meta property="article:published_time" content=2024-11-27T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/props-object-destructuring/" />
+
+    
+    <meta property="og:article:author" content="Stavros G." />
+    <meta property="article:author" content="Stavros G." />
+    <meta name="author" content="Stavros G." />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Props Object Destructuring",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-11-27",
+        "description": "",
+        "wordCount":  501 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-11-27",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Stavros\u0027 Blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.139.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/props-object-destructuring/">
+  <meta property="og:site_name" content="Stavros&#39; Blog">
+  <meta property="og:title" content="Props Object Destructuring">
+  <meta property="og:description" content="Greetings Greetings from a passionate beginner front-end engineer to every single of you. I hope that you are having a wonderful day, you are improving yourself and wining your silent battles.
+Intro After finishing the React Basics course provided by Meta on Coursera platform, which is part of the Front-end Developer Professional Certificate, I ended up being puzzled about the way that a component accepts a parameter. In React language, the way that a component accepts prop data.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-27T00:00:00+00:00">
+    <meta property="article:tag" content="Frontend">
+    <meta property="article:tag" content="React">
+    <meta property="article:tag" content="Components">
+    <meta property="article:tag" content="Props">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Object">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Props Object Destructuring">
+  <meta name="twitter:description" content="Greetings Greetings from a passionate beginner front-end engineer to every single of you. I hope that you are having a wonderful day, you are improving yourself and wining your silent battles.
+Intro After finishing the React Basics course provided by Meta on Coursera platform, which is part of the Front-end Developer Professional Certificate, I ended up being puzzled about the way that a component accepts a parameter. In React language, the way that a component accepts prop data.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/my-blog/posts/props-object-destructuring/">
+    <link href="/my-blog/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/my-blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/my-blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/my-blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/my-blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/my-blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/my-blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/my-blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/my-blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/my-blog/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/my-blog/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/my-blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/my-blog/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Props Object Destructuring</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-11-27T00:00:00&#43;00:00" itemprop="datePublished"> 27 Nov 2024 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="greetings">Greetings</h1>
+<p>Greetings from a passionate beginner front-end engineer to every single of you. I hope that you are having a wonderful day, you are improving yourself and wining your silent battles.</p>
+<h1 id="intro">Intro</h1>
+<p>After finishing the <em>React Basics</em> course provided by <em>Meta</em> on Coursera platform, which is part of the <em>Front-end Developer Professional Certificate</em>, I ended up being puzzled about the way that a component accepts a parameter. In <em>React</em> language, the way that a component accepts prop data.</p>
+<h1 id="currentmessage-react-component">CurrentMessage React Component</h1>
+<p>Consider the following React component:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">CurrentMessage</span><span class="p">(</span> <span class="p">{</span><span class="nx">day</span><span class="p">}</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">let</span> <span class="nx">message</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="nx">day</span> <span class="o">==</span> <span class="mi">1</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">message</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Here</span> <span class="nx">we</span> <span class="nx">go</span> <span class="nx">again</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span> <span class="nx">message</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">CurrentMessage</span><span class="p">;</span>
+</span></span></code></pre></div><p>When I saw the <code>CurrentMessage( { day } )</code> I wondered:</p>
+<ul>
+<li><em>Is this a JSX expression?</em></li>
+<li><em>Am I passing a JavaScript object as a parameter?</em></li>
+</ul>
+<p>Therefore, I did a little research.
+So buckle up and allow me to show what I found ;)</p>
+<h1 id="props">Props</h1>
+<p>As you may already know, in React, data flows from the parent component to the child component, constructing a parent-child relationship. This is done via <strong>props</strong>.</p>
+<p><strong>props</strong> are immutable, that is read-only, therefore the child cannot operate on them but only to consume/read them. This data comes from the outside of the child component and passed by the parent component.</p>
+<p>Consider this simple example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="c1">// App.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">ChildComponent</span> <span class="nx">from</span> <span class="s1">&#39;./ChildComponent&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="nx">ChildComponent</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Hello&#39;</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">ChildComponent</span><span class="p">(</span><span class="nx">props</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">I</span> <span class="nx">received</span><span class="o">:</span> <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">ChildComponent</span><span class="p">;</span>
+</span></span></code></pre></div><p>So far so good! It is known that a child accepts data from its parent through props, this is why <code>props</code> parameter is added in the definition of the component.</p>
+<p>Therefore, what is the <em>day</em> we saw in <code>CurrentMessage( { day } )</code>?</p>
+<h1 id="object-destructuring">Object Destructuring</h1>
+<p>Consider the following simple example, which illustrates object destructuring in JavaScript:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">lastName</span><span class="o">:</span> <span class="s2">&#34;Doe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">              <span class="nx">username</span><span class="o">:</span> <span class="s2">&#34;un1d3nt1f13d&#34;</span>
+</span></span><span class="line"><span class="cl">             <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">let</span> <span class="p">{</span><span class="nx">firstName</span><span class="o">:</span> <span class="nx">first</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">lastName</span><span class="o">:</span> <span class="nx">last</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">username</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`The user </span><span class="si">${</span><span class="nx">first</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">last</span><span class="si">}</span><span class="sb"> has the following username, </span><span class="si">${</span><span class="nx">username</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span></span></code></pre></div><p>The above is a simple example of destructuring an object in vanilla JavaScript. The only thing that may need a little elaboration is the way that the destructuring happened.</p>
+<p>When we want to destructure the object properties to variables that have a different name we use the following mapping:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="p">{</span><span class="nx">sourceProperty</span><span class="o">:</span> <span class="nx">targetVariable</span><span class="p">}</span> <span class="o">=</span> <span class="nx">object</span><span class="p">;</span>
+</span></span></code></pre></div><p>In any other case, the property names are used as variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">let</span> <span class="p">{</span> <span class="nx">username</span><span class="p">,</span> <span class="nx">firstName</span><span class="p">,</span> <span class="nx">lastName</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">user</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// The order does not matter
+</span></span></span></code></pre></div><h1 id="props-object">Props Object</h1>
+<p>Back to our example in React, some data were passed to the <code>ChildComponent</code> component. Therefore, <code>props</code> is an object with a <code>data</code> property:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="p">{</span><span class="s2">&#34;data&#34;</span><span class="o">:</span> <span class="s1">&#39;Hello&#39;</span><span class="p">}</span> <span class="c1">// props object
+</span></span></span></code></pre></div><h1 id="solving-the-mystery">Solving The Mystery</h1>
+<p>Therefore, incorporating the above knowledge, the <code>CurrentMessage( { day } )</code> performs an object destructuring of the <code>props</code> object.</p>
+<p>Thus, the <code>ChildComponent</code> can be modified as such in order to use the data directly:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JavaScript" data-lang="JavaScript"><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">ChildComponent</span><span class="p">(</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">I</span> <span class="nx">received</span><span class="o">:</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">ChildComponent</span><span class="p">;</span>
+</span></span></code></pre></div>
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/lArch1t3ct" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/stavros-gkounis/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2024 Stavros G..
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/my-blog/js/main.js" ></script>
+
+    
+
+</body>
+</html>

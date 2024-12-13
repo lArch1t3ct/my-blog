@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Stavros&#39; Blog</title>
+    <link>http://localhost:1313/my-blog/tags/</link>
+    <description>Recent content in Tags on Stavros&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Components</title>
+      <link>http://localhost:1313/my-blog/tags/components/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/components/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Frontend</title>
+      <link>http://localhost:1313/my-blog/tags/frontend/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/frontend/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hooks</title>
+      <link>http://localhost:1313/my-blog/tags/hooks/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/hooks/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>http://localhost:1313/my-blog/tags/javascript/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/javascript/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>PreventDefault()</title>
+      <link>http://localhost:1313/my-blog/tags/preventdefault/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/preventdefault/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/my-blog/tags/react/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/react/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UseRef</title>
+      <link>http://localhost:1313/my-blog/tags/useref/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/useref/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UseState</title>
+      <link>http://localhost:1313/my-blog/tags/usestate/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/usestate/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Destructuring</title>
+      <link>http://localhost:1313/my-blog/tags/destructuring/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/destructuring/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Object</title>
+      <link>http://localhost:1313/my-blog/tags/object/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/object/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Props</title>
+      <link>http://localhost:1313/my-blog/tags/props/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/props/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>

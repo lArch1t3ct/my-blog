@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frontend on Stavros&#39; Blog</title>
+    <link>http://localhost:1313/my-blog/tags/frontend/</link>
+    <description>Recent content in Frontend on Stavros&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/frontend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React Calculator App</title>
+      <link>http://localhost:1313/my-blog/posts/react-calculator-app/</link>
+      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/react-calculator-app/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Hello from a pationate beginner to front-end development!&lt;br&gt;
+I hope that this post finds you healthy and well, you are having a good day and you are working towards your goals.&lt;/p&gt;
+&lt;p&gt;In case you are having a bad day, the only advice that I can give you is, control the things that are in your sphere of influence and accept everything else. If you are in a dark place, be the light!
+May God help you overcome your battles as He overcame the world!&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Props Object Destructuring</title>
+      <link>http://localhost:1313/my-blog/posts/props-object-destructuring/</link>
+      <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/props-object-destructuring/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Greetings from a passionate beginner front-end engineer to every single of you. I hope that you are having a wonderful day, you are improving yourself and wining your silent battles.&lt;/p&gt;
+&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;After finishing the &lt;em&gt;React Basics&lt;/em&gt; course provided by &lt;em&gt;Meta&lt;/em&gt; on Coursera platform, which is part of the &lt;em&gt;Front-end Developer Professional Certificate&lt;/em&gt;, I ended up being puzzled about the way that a component accepts a parameter. In &lt;em&gt;React&lt;/em&gt; language, the way that a component accepts prop data.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

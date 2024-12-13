@@ -1,0 +1,4 @@
+baseURL = 'https://larch1t3ct.github.io/my-blog/'
+languageCode = 'en-us'
+title = 'lArchitect Blog'
+theme = "hugo-blog-awesome"
