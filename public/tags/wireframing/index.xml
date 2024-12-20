@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wireframing on Stavros&#39; Blog</title>
+    <link>http://localhost:1313/my-blog/tags/wireframing/</link>
+    <description>Recent content in Wireframing on Stavros&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/wireframing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reserve-A-Table Feature Design</title>
+      <link>http://localhost:1313/my-blog/posts/reserve-a-table-feature-ux-ui/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/reserve-a-table-feature-ux-ui/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Greetings from a passionate beginner front-end engineer.
+I hope that this post finds you healthy and well, and you are moving forward on achieving your goals.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;During my attendance of the &lt;em&gt;Principles of UX/UI Design&lt;/em&gt; course, provided on Coursera by Meta and as part of my journey to acquire the Front-end Developer Professional Certificate, I had to design a reserve-a-table feature for a fictional restaurant.&lt;/p&gt;
+&lt;p&gt;The whole process involved using empathy tools such creating a persona and journey map. Having those artifacts produced, the wireframe of two screens were produced, the &lt;em&gt;table reservation screen&lt;/em&gt; and the &lt;em&gt;reservation confirmation screen&lt;/em&gt;. Finally, a high-fidelity prototype was created based on the wireframes.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

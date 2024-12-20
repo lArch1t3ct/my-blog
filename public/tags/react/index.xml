@@ -6,7 +6,24 @@
     <description>Recent content in React on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Accordion Component Implementation</title>
+      <link>http://localhost:1313/my-blog/posts/accordion-component-implementation/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/accordion-component-implementation/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Greetings from a passionate beginner front-end engineer.
+I hope this post finds you healthy and well, and you are progressing toward achieving your goals.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;In order to enhance my front-end development skills—what is more, my React skills—I started the &lt;em&gt;Build 25 React Projects&lt;/em&gt; tutorial offered on &lt;em&gt;freeCodeCamp.org&lt;/em&gt; by &lt;em&gt;Sangam Mukherjee&lt;/em&gt;.
+In the beginning, I started assuming the copycat role, that is I followed along with the tutor.&lt;/p&gt;
+&lt;p&gt;Despite the fact the code that the tutor solved the two challenges presented, that is single-selection and multi-selection behaviour, I realized an opportunity to improve the user experience (UX). The problem emerges when switching between states. In particular:&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>React Calculator App</title>
       <link>http://localhost:1313/my-blog/posts/react-calculator-app/</link>

@@ -6,11 +6,77 @@
     <description>Recent content in Tags on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Empathy-Tools</title>
+      <link>http://localhost:1313/my-blog/tags/empathy-tools/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/empathy-tools/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Journey Map</title>
+      <link>http://localhost:1313/my-blog/tags/journey-map/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/journey-map/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Persona</title>
+      <link>http://localhost:1313/my-blog/tags/persona/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/persona/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Prototyping</title>
+      <link>http://localhost:1313/my-blog/tags/prototyping/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/prototyping/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>UX/UI</title>
+      <link>http://localhost:1313/my-blog/tags/ux/ui/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/ux/ui/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wireframing</title>
+      <link>http://localhost:1313/my-blog/tags/wireframing/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/wireframing/</guid>
+      
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>Components</title>
       <link>http://localhost:1313/my-blog/tags/components/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/components/</guid>
       
@@ -19,9 +85,20 @@
     </item>
     
     <item>
+      <title>FreeCodeCamp</title>
+      <link>http://localhost:1313/my-blog/tags/freecodecamp/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/freecodecamp/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Frontend</title>
       <link>http://localhost:1313/my-blog/tags/frontend/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/frontend/</guid>
       
@@ -32,7 +109,7 @@
     <item>
       <title>Hooks</title>
       <link>http://localhost:1313/my-blog/tags/hooks/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/hooks/</guid>
       
@@ -43,9 +120,20 @@
     <item>
       <title>JavaScript</title>
       <link>http://localhost:1313/my-blog/tags/javascript/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/javascript/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>React</title>
+      <link>http://localhost:1313/my-blog/tags/react/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/react/</guid>
       
       <description></description>
       
@@ -57,17 +145,6 @@
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/preventdefault/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>React</title>
-      <link>http://localhost:1313/my-blog/tags/react/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/my-blog/tags/react/</guid>
       
       <description></description>
       

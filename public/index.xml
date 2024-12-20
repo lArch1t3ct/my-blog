@@ -6,7 +6,40 @@
     <description>Recent content in Home on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reserve-A-Table Feature Design</title>
+      <link>http://localhost:1313/my-blog/posts/reserve-a-table-feature-ux-ui/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/reserve-a-table-feature-ux-ui/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Greetings from a passionate beginner front-end engineer.
+I hope that this post finds you healthy and well, and you are moving forward on achieving your goals.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;During my attendance of the &lt;em&gt;Principles of UX/UI Design&lt;/em&gt; course, provided on Coursera by Meta and as part of my journey to acquire the Front-end Developer Professional Certificate, I had to design a reserve-a-table feature for a fictional restaurant.&lt;/p&gt;
+&lt;p&gt;The whole process involved using empathy tools such creating a persona and journey map. Having those artifacts produced, the wireframe of two screens were produced, the &lt;em&gt;table reservation screen&lt;/em&gt; and the &lt;em&gt;reservation confirmation screen&lt;/em&gt;. Finally, a high-fidelity prototype was created based on the wireframes.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Accordion Component Implementation</title>
+      <link>http://localhost:1313/my-blog/posts/accordion-component-implementation/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/accordion-component-implementation/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Greetings from a passionate beginner front-end engineer.
+I hope this post finds you healthy and well, and you are progressing toward achieving your goals.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;To enhance my front-end development skills and, more importantly, my React skills, I started the Build 25 React Projects tutorial offered on freeCodeCamp.org by Sangam Mukherjee.
+In the beginning, I started assuming the copycat role, that is I followed along with the tutor.&lt;/p&gt;
+&lt;p&gt;Despite the fact the code that the tutor solved the two challenges presented, that is single-selection and multi-selection behavior, I realized an opportunity to improve the user experience (UX). The problem emerges when switching between states. In particular:&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>React Calculator App</title>
       <link>http://localhost:1313/my-blog/posts/react-calculator-app/</link>
