@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Key_Events on Stavros&#39; Blog</title>
+    <link>http://localhost:1313/my-blog/tags/key_events/</link>
+    <description>Recent content in Key_Events on Stavros&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/key_events/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript - KONAMI Code</title>
+      <link>http://localhost:1313/my-blog/posts/konami-code/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/konami-code/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Welcome my dear reader to today&amp;rsquo;s blog post.
+I hope that you are having a good day, broading your knowledge base and hitting one target after the other.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;In today&amp;rsquo;s blog post, we&amp;rsquo;ll talk about how we can perform an action when the keybaord sequence is identified.&lt;/p&gt;
+&lt;p&gt;This blog was writter with the aim of showing and explaining how we can keep a fixed number of keys pressed by the user—we don&amp;rsquo;t want to create a keylogger—and presenting some intricacies of the &lt;code&gt;Array.prototype.splice()&lt;/code&gt; method.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

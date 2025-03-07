@@ -6,7 +6,23 @@
     <description>Recent content in JavaScript on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript - KONAMI Code</title>
+      <link>http://localhost:1313/my-blog/posts/konami-code/</link>
+      <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/konami-code/</guid>
+      
+      <description>&lt;h1 id=&#34;greetings&#34;&gt;Greetings&lt;/h1&gt;
+&lt;p&gt;Welcome my dear reader to today&amp;rsquo;s blog post.
+I hope that you are having a good day, broading your knowledge base and hitting one target after the other.&lt;/p&gt;
+&lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
+&lt;p&gt;In today&amp;rsquo;s blog post, we&amp;rsquo;ll talk about how we can perform an action when the keybaord sequence is identified.&lt;/p&gt;
+&lt;p&gt;This blog was writter with the aim of showing and explaining how we can keep a fixed number of keys pressed by the user—we don&amp;rsquo;t want to create a keylogger—and presenting some intricacies of the &lt;code&gt;Array.prototype.splice()&lt;/code&gt; method.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Accordion Component Implementation</title>
       <link>http://localhost:1313/my-blog/posts/accordion-component-implementation/</link>
@@ -18,9 +34,9 @@
 &lt;p&gt;Greetings from a passionate beginner front-end engineer.
 I hope this post finds you healthy and well, and you are progressing toward achieving your goals.&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;In order to enhance my front-end development skills—what is more, my React skills—I started the &lt;em&gt;Build 25 React Projects&lt;/em&gt; tutorial offered on &lt;em&gt;freeCodeCamp.org&lt;/em&gt; by &lt;em&gt;Sangam Mukherjee&lt;/em&gt;.
+&lt;p&gt;To enhance my front-end development skills and, more importantly, my React skills, I started the Build 25 React Projects tutorial offered on freeCodeCamp.org by Sangam Mukherjee.
 In the beginning, I started assuming the copycat role, that is I followed along with the tutor.&lt;/p&gt;
-&lt;p&gt;Despite the fact the code that the tutor solved the two challenges presented, that is single-selection and multi-selection behaviour, I realized an opportunity to improve the user experience (UX). The problem emerges when switching between states. In particular:&lt;/p&gt;</description>
+&lt;p&gt;Despite the fact the code that the tutor solved the two challenges presented, that is single-selection and multi-selection behavior, I realized an opportunity to improve the user experience (UX). The problem emerges when switching between states. In particular:&lt;/p&gt;</description>
       
     </item>
     
