@@ -6,7 +6,21 @@
     <description>Recent content in Home on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Layout - Flexbox: Pricing Tables (Beginner)</title>
+      <link>http://localhost:1313/my-blog/posts/pricing-table-flexbox-beginner/</link>
+      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/pricing-table-flexbox-beginner/</guid>
+      
+      <description>&lt;h1 id=&#34;beginner---pricing-table&#34;&gt;Beginner - Pricing Table&lt;/h1&gt;
+&lt;p&gt;Hello dear reader, thank you for your interest to my blog post. I hope you are having a wonderful day!&lt;/p&gt;
+&lt;p&gt;In case you are having a bad day, instead for letting the situation be on top of you, take a step back and ask yourself, &lt;em&gt;what is God trying to teach me?&lt;/em&gt; Remember, &lt;em&gt;a smooth sea never made a skilled sailor&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Putting my advise aside, I hope through this post you acquire some confidence in building a pricing table, which is common nowadays.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>JavaScript - KONAMI Code</title>
       <link>http://localhost:1313/my-blog/posts/konami-code/</link>
