@@ -6,13 +6,68 @@
     <description>Recent content in Tags on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 21 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Art</title>
+      <link>http://localhost:1313/my-blog/tags/art/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/art/</guid>
+      
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>CSS</title>
       <link>http://localhost:1313/my-blog/tags/css/</link>
-      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/css/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Design</title>
+      <link>http://localhost:1313/my-blog/tags/design/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/design/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Grid</title>
+      <link>http://localhost:1313/my-blog/tags/grid/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/grid/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Layouts</title>
+      <link>http://localhost:1313/my-blog/tags/layouts/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/layouts/</guid>
+      
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Mondrian</title>
+      <link>http://localhost:1313/my-blog/tags/mondrian/</link>
+      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/tags/mondrian/</guid>
       
       <description></description>
       
@@ -24,17 +79,6 @@
       <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/tags/flexbox/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Layouts</title>
-      <link>http://localhost:1313/my-blog/tags/layouts/</link>
-      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/my-blog/tags/layouts/</guid>
       
       <description></description>
       

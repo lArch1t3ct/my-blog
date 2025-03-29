@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">CSS Layout - Grid: Mondrian Project | Stavros&#39; Blog</title>
+<meta property="og:title" content="CSS Layout - Grid: Mondrian Project | Stavros&#39; Blog" />
+<meta name="twitter:title" content="CSS Layout - Grid: Mondrian Project | Stavros&#39; Blog" />
+<meta itemprop="name" content="CSS Layout - Grid: Mondrian Project | Stavros&#39; Blog" />
+<meta name="application-name" content="CSS Layout - Grid: Mondrian Project | Stavros&#39; Blog" />
+<meta property="og:site_name" content="Stavros&#39; Blog" />
+
+<meta name="description" content="Welcome to my journey of transitioning from cybersecurity to software development.">
+<meta itemprop="description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta property="og:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta name="twitter:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/my-blog/posts/mondrian-project/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-03-29T00:00:00Z />
+    <meta property="article:published_time" content=2025-03-29T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/mondrian-project/" />
+
+    
+    <meta property="og:article:author" content="Stavros G." />
+    <meta property="article:author" content="Stavros G." />
+    <meta name="author" content="Stavros G." />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "CSS Layout - Grid: Mondrian Project",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-03-29",
+        "description": "",
+        "wordCount":  750 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-03-29",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Stavros\u0027 Blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.139.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/mondrian-project/">
+  <meta property="og:site_name" content="Stavros&#39; Blog">
+  <meta property="og:title" content="CSS Layout - Grid: Mondrian Project">
+  <meta property="og:description" content="Intro Hello my dear reader, I hope that you are having a fantastic day.
+In today’s blog post, we are diving into the art by recreating a mondrian painting by utiling the Grid Layout. Therefore, without futher ado, let’s start by analyzing the art, creating a custom design and then implementing.
+Requirement The requirement for this project is to achieve the following end result:
+Design Let’s break the design into actionable steps.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-29T00:00:00+00:00">
+    <meta property="article:tag" content="CSS">
+    <meta property="article:tag" content="Layouts">
+    <meta property="article:tag" content="Grid">
+    <meta property="article:tag" content="Mondrian">
+    <meta property="article:tag" content="Art">
+    <meta property="article:tag" content="Design">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CSS Layout - Grid: Mondrian Project">
+  <meta name="twitter:description" content="Intro Hello my dear reader, I hope that you are having a fantastic day.
+In today’s blog post, we are diving into the art by recreating a mondrian painting by utiling the Grid Layout. Therefore, without futher ado, let’s start by analyzing the art, creating a custom design and then implementing.
+Requirement The requirement for this project is to achieve the following end result:
+Design Let’s break the design into actionable steps.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/my-blog/posts/mondrian-project/">
+    <link href="/my-blog/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/my-blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/my-blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/my-blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/my-blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/my-blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/my-blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/my-blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/my-blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/my-blog/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/my-blog/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/my-blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/my-blog/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">CSS Layout - Grid: Mondrian Project</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-03-29T00:00:00&#43;00:00" itemprop="datePublished"> 29 Mar 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="intro">Intro</h1>
+<p>Hello my dear reader, I hope that you are having a fantastic day.</p>
+<p>In today&rsquo;s blog post, we are diving into the art by recreating a mondrian painting by utiling the <em>Grid Layout</em>. Therefore, without futher ado, let&rsquo;s start by analyzing the art, creating a custom design and then implementing.</p>
+<h1 id="requirement">Requirement</h1>
+<p>The requirement for this project is to achieve the following end result:</p>
+<img src="./media/00-grid-dimensions.png" height=400 width=700 />
+<h1 id="design">Design</h1>
+<p>Let&rsquo;s break the design into actionable steps.</p>
+<h2 id="gaps">Gaps</h2>
+<p>Since the gaps have color and width and height, depending whether it is a horizontal or vertical gap, they should be <strong>grid items</strong>.</p>
+<img src="./media/01-grid-gaps-and-border.png" height=400 width=700 />
+<br/><br/>
+<p>Now that gaps have been defined, it is time for contemplating on the rows and the columns of the grid layout:
+<img src="./media/02-7-by-7-grid-layout.png" height=400 width=700 /></p>
+<blockquote>
+<p>Taking into account the gaps, the layout will be a <code>7x7</code> grid.</p>
+</blockquote>
+<blockquote>
+<p>The last horizontal gap should have been mentally extended too, just like the other gap lines.</p>
+</blockquote>
+<h2 id="grid-items">Grid Items</h2>
+<p>Apart from the gaps, which are grid items too, let&rsquo;s define the rest grid items:
+<img src="./media/03-grid-items.png" height=400 width=700 /></p>
+<blockquote>
+<p><strong>border</strong> is not considered an element of the grid.</p>
+</blockquote>
+<h2 id="grid-dimensions">Grid Dimensions</h2>
+<p>Having the grid and the grid items defined, including the gaps, let&rsquo;s put on the design the sizes of the rows and columns.</p>
+<h3 id="rows">Rows</h3>
+<img src="./media/04-grid-row-dimensions.png" height=300 width=1000 />
+<blockquote>
+<p>The requirements define that the height is <code>748px</code>.<br />
+If the border itself is <code>10px</code> that means in addition with the gap it would a <code>19px</code>, which would have exceed the requirements.<br />
+For this reason, in this project, the border of the blue grid item will be <code>2px</code>. <br />
+<em>This comment explains the parentheses in the sum of the heights.</em></p>
+</blockquote>
+<h3 id="columns">Columns</h3>
+<img src="./media/05-grid-column-dimensions.png" height=800 width=1000 />
+<h1 id="html-code">HTML Code</h1>
+<p>Perfect, having everything set and done, let&rsquo;s define our HTML code so that we can start using the grid layout:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-HTML" data-lang="HTML"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;grid-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-1&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;red&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-2&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-3&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gray&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-4&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-5&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gray&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-6&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gray&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-7&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-8&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;blue&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-9&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-10&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-11&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gray&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-12&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;yellow&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-13&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gap&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-14&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;black&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;grid-item-15&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;gray&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></div><blockquote>
+<p>The <code>id</code> attribute corresponds to the grid item as descriped in the custom design image.</p>
+</blockquote>
+<h1 id="css-code">CSS Code</h1>
+<h2 id="defining-the-colors">Defining The Colors</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="line"><span class="cl"><span class="p">:</span><span class="nd">root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--gap-color</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--white</span><span class="p">:</span> <span class="mh">#F0F1EC</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--red</span><span class="p">:</span> <span class="mh">#E72F24</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--black</span><span class="p">:</span> <span class="mh">#232629</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--blue</span><span class="p">:</span> <span class="mh">#004592</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">--yellow</span><span class="p">:</span> <span class="mh">#F9D01E</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><h2 id="defining-the-grid-layout">Defining The Grid Layout</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">grid-container</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="k">display</span><span class="p">:</span> <span class="k">grid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">grid-template</span><span class="p">:</span> <span class="mi">414</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">130</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">155</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">20</span><span class="kt">px</span> <span class="o">/</span> <span class="mi">320</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">198</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">153</span><span class="kt">px</span> <span class="mi">9</span><span class="kt">px</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span></code></pre></div><img src='./media/06-grid-template.png' height=700 width=700 />
+<h2 id="placing-the-gap-grid-items">Placing The Gap Grid Items</h2>
+<p>Let&rsquo;s start placing our gap grid items on the grid layout.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">gap</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">gap</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span> <span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-13</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-7</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">6</span> <span class="o">/</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-1</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-4</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-9</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">5</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">-1</span> <span class="o">/</span> <span class="mi">7</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-10</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-3</span> <span class="o">/</span> <span class="mi">-2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">-2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><blockquote>
+<p>Following the column and row numbers from the design section, I believe the values for the <code>grid-row</code> and <code>grid-column</code> properties make sense.</p>
+</blockquote>
+<br />
+<img src="./media/07-grid-gap-placement.png" height=700 width=800 />
+<h2 id="placing-the-rest-grid-items">Placing The Rest Grid Items</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-CSS" data-lang="CSS"><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-3</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-5</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-6</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-8</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span> <span class="c">/* or 7 / 8 */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">border-bottom-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">gap</span><span class="o">-</span><span class="kc">color</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-bottom-width</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">border-bottom-style</span><span class="p">:</span> <span class="kc">solid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-11</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span> <span class="c">/* or 7 / 8 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-12</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span> <span class="c">/* or 7 / 8 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">3</span> <span class="o">/</span> <span class="mi">4</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-14</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span> <span class="c">/* or 7 / 8 */</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">#</span><span class="nn">grid-item-15</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-row</span><span class="p">:</span> <span class="mi">5</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">grid-column</span><span class="p">:</span> <span class="mi">-2</span> <span class="o">/</span> <span class="mi">-1</span><span class="p">;</span> <span class="c">/* 7 / 8 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><img src="./media/08-grid-items-placement.png" height=700 width=800 />
+<h1 id="conclusion">Conclusion</h1>
+<p>As you can see, the design phase took much longer the implementation one but this is usually what happens in the product lifecycle.</p>
+<p>If you don&rsquo;t have an adequate design, then you are risking falling into the <em>looking into a blank screen</em> phase. Once everything has been laid out, it was easy instructing the grid items to occupy the correct grid cells.</p>
+<h1 id="greetings">Greetings</h1>
+<p>As always, thank you for staying up to this point! I hope that through this challenge I transfered you the fact that <em>preparation</em> beats <em>fear</em>!</p>
+<p>In any case, I am rooting for you to achieve your goals but above all stay healthy mentally and physically!</p>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><a href="https://excalidraw.com/">Excalidraw</a></li>
+<li><a href="https://codepen.io/w3b4rt/pen/MYWPQZp">Full Code</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/lArch1t3ct" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/stavros-gkounis/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://ko-fi.com/larchitect" target="_blank" rel="noopener noreferrer me"
+    title="Kofi">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+    viewBox="0 -3 23 27" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path
+        d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734c4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09c-.443-.441-3.368-3.049-4.034-3.954c-.709-.965-1.041-2.7-.091-3.71c.951-1.01 3.005-1.086 4.363.407c0 0 1.565-1.782 3.468-.963c1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 Stavros G..
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/my-blog/js/main.js" ></script>
+
+    
+
+</body>
+</html>

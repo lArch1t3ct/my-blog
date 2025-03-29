@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Layouts on Stavros&#39; Blog</title>
-    <link>http://localhost:1313/my-blog/tags/layouts/</link>
-    <description>Recent content in Layouts on Stavros&#39; Blog</description>
+    <title>Grid on Stavros&#39; Blog</title>
+    <link>http://localhost:1313/my-blog/tags/grid/</link>
+    <description>Recent content in Grid on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/layouts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/tags/grid/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSS Layout - Grid: Mondrian Project</title>
       <link>http://localhost:1313/my-blog/posts/mondrian-project/</link>
@@ -26,20 +26,6 @@
 &lt;br/&gt;&lt;br/&gt;
 &lt;p&gt;Now that gaps have been defined, it is time for contemplating on the rows and the columns of the grid layout:
 &lt;img src=&#34;./media/02-7-by-7-grid-layout.png&#34; height=400 width=700 /&gt;&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>CSS Layout - Flexbox: Pricing Tables (Beginner)</title>
-      <link>http://localhost:1313/my-blog/posts/pricing-table-flexbox-beginner/</link>
-      <pubDate>Fri, 21 Mar 2025 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/my-blog/posts/pricing-table-flexbox-beginner/</guid>
-      
-      <description>&lt;h1 id=&#34;beginner---pricing-table&#34;&gt;Beginner - Pricing Table&lt;/h1&gt;
-&lt;p&gt;Hello dear reader, thank you for your interest to my blog post. I hope you are having a wonderful day!&lt;/p&gt;
-&lt;p&gt;In case you are having a bad day, instead for letting the situation be on top of you, take a step back and ask yourself, &lt;em&gt;what is God trying to teach me?&lt;/em&gt; Remember, &lt;em&gt;a smooth sea never made a skilled sailor&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Putting my advise aside, I hope through this post you acquire some confidence in building a pricing table, which is common nowadays.&lt;/p&gt;</description>
       
     </item>
     
