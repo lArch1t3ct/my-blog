@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en-gb"><head><script src="/my-blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=my-blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title itemprop="name">NodeJS - Simple CRUD API Development | Stavros&#39; Blog</title>
+<meta property="og:title" content="NodeJS - Simple CRUD API Development | Stavros&#39; Blog" />
+<meta name="twitter:title" content="NodeJS - Simple CRUD API Development | Stavros&#39; Blog" />
+<meta itemprop="name" content="NodeJS - Simple CRUD API Development | Stavros&#39; Blog" />
+<meta name="application-name" content="NodeJS - Simple CRUD API Development | Stavros&#39; Blog" />
+<meta property="og:site_name" content="Stavros&#39; Blog" />
+
+<meta name="description" content="Welcome to my journey of transitioning from cybersecurity to software development.">
+<meta itemprop="description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta property="og:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+<meta name="twitter:description" content="Welcome to my journey of transitioning from cybersecurity to software development." />
+
+<meta property="og:locale" content="en-gb" />
+<meta name="language" content="en-gb" />
+
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/my-blog/posts/simple-crud-api-development/" title="English" />
+
+
+
+
+
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2025-04-07T00:00:00Z />
+    <meta property="article:published_time" content=2025-04-07T00:00:00Z />
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/simple-crud-api-development/" />
+
+    
+    <meta property="og:article:author" content="Stavros G." />
+    <meta property="article:author" content="Stavros G." />
+    <meta name="author" content="Stavros G." />
+    
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "NodeJS - Simple CRUD API Development",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2025-04-07",
+        "description": "",
+        "wordCount":  1568 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2025-04-07",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Stavros\u0027 Blog"
+        }
+    }
+    </script>
+
+
+<meta name="generator" content="Hugo 0.139.2">
+
+    
+    <meta property="og:url" content="http://localhost:1313/my-blog/posts/simple-crud-api-development/">
+  <meta property="og:site_name" content="Stavros&#39; Blog">
+  <meta property="og:title" content="NodeJS - Simple CRUD API Development">
+  <meta property="og:description" content="Intro Hello my dear reader, I hope you are having a fantastic day and you are here to learn something new or hopefully to applause my journey of enhancing my skillset. Ideally both!
+In today’s post, a simple CRUD API will be developed in NodeJS using a MongoDB as a database as instructed by Coding Cleverly on freeCodeCamp.org
+Initializing The Project The very first thing that it should be done is to create a package.json file, which sets up a new npm package.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-07T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-04-07T00:00:00+00:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="NodeJS">
+    <meta property="article:tag" content="API">
+    <meta property="article:tag" content="RESTful">
+    <meta property="article:tag" content="MongoDB">
+    <meta property="article:tag" content="FreeCodeCamp">
+
+
+    
+    
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NodeJS - Simple CRUD API Development">
+  <meta name="twitter:description" content="Intro Hello my dear reader, I hope you are having a fantastic day and you are here to learn something new or hopefully to applause my journey of enhancing my skillset. Ideally both!
+In today’s post, a simple CRUD API will be developed in NodeJS using a MongoDB as a database as instructed by Coding Cleverly on freeCodeCamp.org
+Initializing The Project The very first thing that it should be done is to create a package.json file, which sets up a new npm package.">
+
+
+    
+
+    <link rel="canonical" href="http://localhost:1313/my-blog/posts/simple-crud-api-development/">
+    <link href="/my-blog/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
+    <link href="/my-blog/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
+
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/my-blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/my-blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/my-blog/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="/my-blog/icons/safari-pinned-tab.svg">
+    <link rel="shortcut icon" href="/my-blog/favicon.ico">
+
+
+
+
+<link rel="manifest" href="http://localhost:1313/my-blog/site.webmanifest">
+
+<meta name="msapplication-config" content="/my-blog/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#434648">
+
+    
+    <link rel="icon" type="image/svg+xml" href="/my-blog/icons/favicon.svg">
+
+    
+    
+</head>
+<body data-theme = "dark" class="notransition">
+
+<script src="/my-blog/js/theme.js"></script>
+
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="http://localhost:1313/my-blog/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
+viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+stroke-linejoin="round" class="feather feather-home">
+<title>Home</title>
+<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+<polyline points="9 22 9 12 15 12 15 22"></polyline>
+</svg>
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" stroke="currentColor" fill="none" viewBox="0 0 14 14"><title>Menu</title><path stroke-linecap="round" stroke-linejoin="round" d="M10.595 7L3.40726 7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 3.51488L3.49301 3.51488"></path><path stroke-linecap="round" stroke-linejoin="round" d="M10.5096 10.4851H3.49301"></path><path stroke-linecap="round" stroke-linejoin="round" d="M0.5 12.5V1.5C0.5 0.947715 0.947715 0.5 1.5 0.5H12.5C13.0523 0.5 13.5 0.947715 13.5 1.5V12.5C13.5 13.0523 13.0523 13.5 12.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5Z"></path></svg>
+            </span>
+        </label>
+
+        <div class="trigger">
+            <ul class="trigger-container">
+                
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/">
+                        Home
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link active" href="/my-blog/posts/">
+                        Posts
+                    </a>
+                    
+                </li>
+                
+                <li>
+                    <a class="menu-link " href="/my-blog/pages/about/">
+                        About
+                    </a>
+                    
+                </li>
+                
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+                
+                
+            </ul>
+            <a id="mode" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-sunny" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>LIGHT</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mode-moon" width="21" height="21" viewBox="0 0 14 14" stroke-width="1">
+<title>DARK</title><g><circle cx="7" cy="7" r="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></circle><line x1="7" y1="0.5" x2="7" y2="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="2.4" x2="3.82" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="0.5" y1="7" x2="2.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="2.4" y1="11.6" x2="3.82" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="7" y1="13.5" x2="7" y2="11.5" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="11.6" x2="10.18" y2="10.18" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="13.5" y1="7" x2="11.5" y2="7" fill="none" stroke-linecap="round" stroke-linejoin="round"></line><line x1="11.6" y1="2.4" x2="10.18" y2="3.82" fill="none" stroke-linecap="round" stroke-linejoin="round"></line></g></svg>
+            </a>
+        </div>
+    </nav>
+</div>
+
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">NodeJS - Simple CRUD API Development</h1>
+                
+                
+                
+                <div class="post-meta">
+                    <time datetime="2025-04-07T00:00:00&#43;00:00" itemprop="datePublished"> 7 Apr 2025 </time>
+                </div>
+                
+            </header>
+            
+            <div class="page-content">
+                <h1 id="intro">Intro</h1>
+<p>Hello my dear reader, I hope you are having a fantastic day and you are here to learn something new or hopefully to applause my journey of enhancing my skillset. Ideally both!</p>
+<p>In today&rsquo;s post, a simple CRUD API will be developed in NodeJS using a MongoDB as a database as instructed by <em>Coding Cleverly</em> on <em>freeCodeCamp.org</em></p>
+<h1 id="initializing-the-project">Initializing The Project</h1>
+<p>The very first thing that it should be done is to create a <code>package.json</code> file, which sets up a new <code>npm</code> package.</p>
+<p>Thus, the contents of such a file should be similar to the one below:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;crud-api&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><blockquote>
+<p>I am in a folder named <code>crud-api</code> thus the value of the key <code>&quot;name&quot;</code>.</p>
+</blockquote>
+<blockquote>
+<p>The value of the key <code>&quot;main&quot;</code> is <code>&quot;index.js&quot;</code>, which practically points to the file that starts everything in our project.</p>
+</blockquote>
+<p>Therefore, in addition, let&rsquo;s create a <code>index.js</code> file as well:</p>
+<pre tabindex="0"><code>\CRUD-API
+  \package.json
+  \index.js
+</code></pre><h1 id="running-the-script">Running The Script</h1>
+<p>The script can be run using the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node index.js
+</span></span></code></pre></div><p>In order, though, to run the script via the package manager the following modification should be performed on the <code>package.json</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;crud-api&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;serve&#34;</span><span class="p">:</span> <span class="s2">&#34;node index.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Having the <code>&quot;serve&quot;</code> key added in <code>package.json</code> file, we can run the <code>index.js</code> file by executing the following command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node run serve
+</span></span></code></pre></div><h1 id="setting-up-the-backend">Setting Up The Backend</h1>
+<p>To set up the backend, the Express.JS framework should be installed by executing:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm i express
+</span></span></code></pre></div><p>If the installation is successful, an entry in <code>package.json</code> should be added under the <code>&quot;dependencies&quot;</code> key:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;crud-api&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;serve&#34;</span><span class="p">:</span> <span class="s2">&#34;node index.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.1.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>To make sure that our backend is working, we can use the Express.JS boilerplate:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span>
+</span></span></code></pre></div><p>Using a client for requesting API endpoint, such as Postman, we can see that our backend is working:</p>
+<img src="./media/00-hello-world.png" alt="Requesting '/' API endpoint" width=800 />
+<h2 id="installing-nodemon">Installing <code>nodemon</code></h2>
+<p>It is at our best interest, when there are changes, the serve to be re-run reflecting the changes, instead of having to manually stop and start the server.</p>
+<p>For this reason, the <code>nodemon</code> package will be install as development dependency, since it is needed only during development. Thus, the following command should be executed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install nodemon --save-dev
+</span></span></code></pre></div><p>After a successful installation, all it needs to be done is to modify the <code>package.json</code> file a little bit in order to use the <code>nodemon</code> package:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-JSON" data-lang="JSON"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;simple-crud&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;serve&#34;</span><span class="p">:</span> <span class="s2">&#34;node index.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;nodemon index.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;keywords&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;license&#34;</span><span class="p">:</span> <span class="s2">&#34;ISC&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;commonjs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;express&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.21.2&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;devDependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;nodemon&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.1.9&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><blockquote>
+<p>Pay attention at the new entry in the <code>&quot;scripts&quot;</code> object.</p>
+</blockquote>
+<h1 id="setting-up-the-mongodb-database">Setting Up The MongoDB Database</h1>
+<p>After a successful account creation and cluster set up, a connection string should available to you.</p>
+<p>If you browse the collections of the cluster, you will find none. It will be created later when we define our <em>Model</em> component.
+Though, let&rsquo;s add the name of our database on the connection string in advance:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">mongodb</span><span class="o">+</span><span class="nx">srv</span><span class="o">:</span><span class="c1">//&lt;db_user&gt;:&lt;db_password&gt;@data-server.qgjeik7.mongodb.net/&lt;Database-Name&gt;?retryWrites=true&amp;w=majority&amp;appName=Data-Server
+</span></span></span></code></pre></div><blockquote>
+<p>Feel free to substitute the <code>&lt;Database-Name&gt;</code> with a name of your liking.</p>
+</blockquote>
+<p>The next step is to install the needed dependencies in order to interact with the mongoDB and retrieve data:</p>
+<ul>
+<li><code>mongodb</code> and</li>
+<li><code>mongoose</code></li>
+</ul>
+<h2 id="connecting-to-the-mongodb">Connecting To The MongoDB</h2>
+<p>Having the dependencies installed and the connection string at hand, it is desirable to connect first at the MongoDB instance and once a connection has been established to start the server:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">uri</span> <span class="o">=</span> <span class="s2">&#34;mongodb+srv://&lt;db_user&gt;:&lt;db_password&gt;@data-server.qgjeik7.mongodb.net/ProductDB?retryWrites=true&amp;w=majority&amp;appName=Data-Server&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">uri</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;[+] Connection established to the MongoDB&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[+] Server is running at port 3000&#39;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="k">catch</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[X] Connection to the database failed&#39;</span><span class="p">));</span>
+</span></span></code></pre></div><h1 id="mvc-architectural-pattern">MVC Architectural Pattern</h1>
+<p>The Model-View-Controller (MVC) architectural design pattern separates an application into three main groups of components:</p>
+<ul>
+<li>Model(s): Data</li>
+<li>View(s): What the user sees</li>
+<li>Controller(s): The middleman between Model and View.</li>
+</ul>
+<p>This design pattern helps to achieve separation of concerns, which asserts that software should be separated based on the kinds of work it performs.</p>
+<img src="./media/01-mvc-pattern.png" alt="Mozilla's Representation of MVC Pattern" width="600" />
+<h2 id="creating-a-model-component">Creating A Model Component</h2>
+<p>We need to define the data structure for our MongoDB collection:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">ProductSchema</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">required</span><span class="o">:</span> <span class="p">[</span><span class="kc">true</span><span class="p">,</span> <span class="s2">&#34;Please enter a product name&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">quantity</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">price</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span><span class="o">:</span> <span class="nb">Number</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="k">default</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nx">image</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">required</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">timestamps</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Product</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">model</span><span class="p">(</span><span class="s2">&#34;Product&#34;</span><span class="p">,</span> <span class="nx">ProductSchema</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Product</span><span class="p">;</span>
+</span></span></code></pre></div><blockquote>
+<p>This file should added in /CRUD-API/models/product-model.js.</p>
+</blockquote>
+<blockquote>
+<p>The first argument of the <code>model()</code> method accepts the <em>singular</em> name of the collection.<br /><br/> Keep in mind that <em>mongoose</em> automatically looks for the <strong>plural</strong> version of your model name. Therefore, a collection name of <em>Product<strong>s</strong></em> will be created.</p>
+</blockquote>
+<h2 id="creating-a-controller-component">Creating A Controller Component</h2>
+<p>The controller component contains the proper user actions which manipulates the model component:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">Product</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../models/product-model.js&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getProducts</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">allProducts</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">find</span><span class="p">({});</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">allProducts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">getProductById</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">product</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">createProduct</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">product</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">updateProductById</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">findByIdAndUpdate</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">product</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">message</span><span class="o">:</span> <span class="s2">&#34;Product not found&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">204</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">product</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">deleteProductById</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">deletedProduct</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">findByIdAndDelete</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">deletedProduct</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">message</span><span class="o">:</span> <span class="s2">&#34;Product not found&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">deletedProduct</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">getProducts</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">getProductById</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">createProduct</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">updateProductById</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">deleteProductById</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>At the tutorial the tutor developed the <code>updateProductById</code> as such:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">updateProductById</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">product</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">findByIdAndUpdate</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">product</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">404</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">message</span><span class="o">:</span> <span class="s2">&#34;Product not found&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">});</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">// Get the updated product
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="kr">const</span> <span class="nx">updatedProduct</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">Product</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span><span class="nx">updatedProduct</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">message</span><span class="o">:</span> <span class="nx">error</span><span class="p">.</span><span class="nx">message</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>From my perspective this violates the separation of concerns since the <code>updateProductById</code> both updates and retrieves the product. Therefore, my implementation is once the product is updated the server returns a <code>204 - No Content</code> status code.</p>
+<h2 id="creating-routes">Creating Routes</h2>
+<p>Routes operate at the <em>Controller Layer</em> and map HTTP routes to functions that reside in the <em>product-controller.js</em> file. Usually the <em>Controller</em> is broken down to <em>Controllers</em> and <em>Routes</em> for a cleaner codebase, separation of concerns and reusability.</p>
+<p>Therefore, the <code>CRUD-API/routes/product-route.js</code> file looks like:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;express&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="p">{</span> <span class="nx">getProducts</span><span class="p">,</span> <span class="nx">getProductById</span><span class="p">,</span> <span class="nx">createProduct</span><span class="p">,</span> <span class="nx">updateProductById</span><span class="p">,</span> <span class="nx">deleteProductById</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../controllers/product-controller&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">getProducts</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&#34;/:id&#34;</span><span class="p">,</span> <span class="nx">getProductById</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="nx">createProduct</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="s2">&#34;/:id&#34;</span><span class="p">,</span> <span class="nx">updateProductById</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">router</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="s2">&#34;/:id&#34;</span><span class="p">,</span> <span class="nx">deleteProductById</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">router</span><span class="p">;</span>
+</span></span></code></pre></div><h2 id="view-component">View Component</h2>
+<p>There is not a page where we display the data in some format, therefore there is no <em>View</em> Component.</p>
+<h1 id="setting-up-the-middleware">Setting Up The Middleware</h1>
+<p>Setting up the middleware can be done with a few JavaScript statements:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span> <span class="c1">// Instructs the server to accept JSON payloads.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Allows submitting information via a query string:
+</span></span></span><span class="line"><span class="cl"><span class="c1">// https://example.com/?name=Chocolate&amp;price=3.99&amp;quantity=30&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">(</span> <span class="p">{</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span> <span class="p">));</span>
+</span></span></code></pre></div><h2 id="final-indexjs-file">Final <code>index.js</code> File</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">productRoute</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./routes/product-route&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">json</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="nx">urlencoded</span><span class="p">(</span> <span class="p">{</span> <span class="nx">extended</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span> <span class="p">));</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s2">&#34;/api/products&#34;</span><span class="p">,</span> <span class="nx">productRoute</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello World&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">uri</span> <span class="o">=</span> <span class="s2">&#34;mongodb+srv://&lt;db-user&gt;:&lt;db-password&gt;@data-server.lh3hoj8.mongodb.net/ProductDB?retryWrites=true&amp;w=majority&amp;appName=&lt;Cluster-Name&gt;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">uri</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nx">then</span><span class="p">(</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[+] Connection Established to ProductDB&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[+] Server is running on port 3000&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="k">catch</span><span class="p">(</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;[X] Connection to the database failed&#39;</span><span class="p">));</span>
+</span></span></code></pre></div><h1 id="playing-around-with-postman">Playing Around With Postman</h1>
+<p>Having everything said and done, let&rsquo;s inspect if our API works.</p>
+<h2 id="creating-a-product">Creating A Product</h2>
+<p>First, a product will be created using a JSON payload:</p>
+<p><img src="./media/02-create-a-product-json.png" alt="Creating a product using postman" width="500" /><br/></p>
+<p>Finally, another product will be created using a urlencoded payload:</p>
+<img src="./media/03-create-a-product-urlencoded.png" alt="Creating a product using postman" width="500" />
+<h2 id="retrieving-products">Retrieving Products</h2>
+<p>First, let&rsquo;s retrieve all the products:
+<img src="./media/04-get-all-products.png" alt="Creating a product using postman" width="500" /><br/></p>
+<p>Finally, let&rsquo;s retrieve only the potatoes by using its id:
+<img src="./media/05-get-product-by-id.png" alt="Creating a product using postman" width="500" /><br/></p>
+<h2 id="updating-a-product">Updating A Product</h2>
+<p>Let&rsquo;s update the name of the <code>chesscase</code> to <code>chocolate</code>:
+<img src="./media/06-update-product-by-id.png" alt="Creating a product using postman" width="500" /></p>
+<h2 id="deleting-a-product">Deleting A Product</h2>
+<p>Let&rsquo;s delete the <code>chocolate</code> product by using its id:
+<img src="./media/07-delete-product-by-id.png" alt="Creating a product using postman" width="500" /></p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Perfect everything works, our code is neat and clean and we just learnt how to create a simple API and setting up a backend environment.</p>
+<p>I would like to thank for your staying up to this point and if you followed along give yourself a pat on the back, this was a milestone at your backend development journey ;).</p>
+<p>Until my next blog post, I wish you nothing above else but health and I am rooting for you to achieve your goals and reach those milestone of yours.</p>
+<p>Take care!</p>
+<h1 id="resources">Resources</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=_7UQPve99r4">CRUD API Tutorial</a></li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-9.0">Overview of ASP.NET Core MVC</a></li>
+<li><a href="https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/architectural-principles#separation-of-concerns">Common Design Principles</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/MVC">MDN Web Docs - MVC</a></li>
+<li><a href="https://www.restack.io/p/express-knowledge-file-naming-conventions">Express.JS File Naming Conventions</a></li>
+<li><a href="https://www.npmjs.com/package/mongoose">Mongoose</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Query_string">Query String</a></li>
+<li><a href="https://github.com/lArch1t3ct/Simple-CRUD-API">Final Code</a></li>
+</ul>
+
+            </div>
+        </article></main>
+</div>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
+
+    <div class="footer_social-icons">
+<a href="https://github.com/lArch1t3ct" target="_blank" rel="noopener noreferrer me"
+    title="Github">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+</a>
+<a href="https://www.linkedin.com/in/stavros-gkounis/" target="_blank" rel="noopener noreferrer me"
+    title="Linkedin">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a href="https://ko-fi.com/larchitect" target="_blank" rel="noopener noreferrer me"
+    title="Kofi">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet"
+    viewBox="0 -3 23 27" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+    stroke-linejoin="round">
+    <path
+        d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734c4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09c-.443-.441-3.368-3.049-4.034-3.954c-.709-.965-1.041-2.7-.091-3.71c.951-1.01 3.005-1.086 4.363.407c0 0 1.565-1.782 3.468-.963c1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" />
+</svg>
+</a>
+</div>
+    <small class="footer_copyright">
+        © 2025 Stavros G..
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
+    </small>
+</footer><a href="#" title="Go to top" id="totop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" stroke="currentColor" viewBox="0 96 960 960">
+    <path d="M283 704.739 234.261 656 480 410.261 725.739 656 677 704.739l-197-197-197 197Z"/>
+</svg>
+
+</a>
+
+
+    
+
+
+
+
+    
+    
+        
+    
+
+    
+    
+        
+    
+
+
+
+    
+    <script async src="http://localhost:1313/my-blog/js/main.js" ></script>
+
+    
+
+</body>
+</html>

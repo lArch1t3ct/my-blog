@@ -6,26 +6,37 @@
     <description>Recent content in Posts on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 27 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeJS - Simple CRUD API Development</title>
+      <link>http://localhost:1313/my-blog/posts/simple-crud-api-development/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/simple-crud-api-development/</guid>
+      
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Hello my dear reader, I hope you are having a fantastic day and you are here to learn something new or hopefully to applause my journey of enhancing my skillset. Ideally both!&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s post, a simple CRUD API will be developed in NodeJS using a MongoDB as a database.&lt;/p&gt;
+&lt;h1 id=&#34;initializing-the-project&#34;&gt;Initializing The Project&lt;/h1&gt;
+&lt;p&gt;The very first thing that it should be done is to create a &lt;code&gt;package.json&lt;/code&gt; file, which sets up a new &lt;code&gt;npm&lt;/code&gt; package.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>CSS Layout - Grid: Mondrian Project</title>
       <link>http://localhost:1313/my-blog/posts/mondrian-project/</link>
-      <pubDate>Thu, 27 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 29 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>http://localhost:1313/my-blog/posts/mondrian-project/</guid>
       
       <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Hello my dear reader, I hope that you are having a fantastic day.&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s blog post, we are diving into the art by recreating a mondrian painting by utiling the &lt;em&gt;Grid Layout&lt;/em&gt;. Therefore, without futher ado, let&amp;rsquo;s start by analyzing the art, creating a custom design and then implementing.&lt;/p&gt;
 &lt;h1 id=&#34;requirement&#34;&gt;Requirement&lt;/h1&gt;
 &lt;p&gt;The requirement for this project is to achieve the following end result:&lt;/p&gt;
-&lt;img src=&#34;./media/dimensions.png&#34; height=400 width=700 /&gt;
+&lt;img src=&#34;./media/00-grid-dimensions.png&#34; height=400 width=700 /&gt;
 &lt;h1 id=&#34;design&#34;&gt;Design&lt;/h1&gt;
-&lt;p&gt;Let&amp;rsquo;s break the design into actionable steps.&lt;/p&gt;
-&lt;h2 id=&#34;gaps&#34;&gt;Gaps&lt;/h2&gt;
-&lt;p&gt;Since the gaps have color and width and height, depending whether it is a horizontal or vertical gap, they should be &lt;strong&gt;grid items&lt;/strong&gt;.&lt;/p&gt;
-&lt;img src=&#34;./media/01-grid-gaps-and-border.png&#34; height=400 width=700 /&gt;
-&lt;br/&gt;&lt;br/&gt;
-&lt;p&gt;Now that gaps have been defined, it is time for contemplating on the rows and the columns of the grid layout:
-&lt;img src=&#34;./media/02-7-by-7-grid-layout.png&#34; height=400 width=700 /&gt;&lt;/p&gt;</description>
+&lt;p&gt;Let&amp;rsquo;s break the design into actionable steps.&lt;/p&gt;</description>
       
     </item>
     

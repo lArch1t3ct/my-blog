@@ -6,7 +6,22 @@
     <description>Recent content in Home on Stavros&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 29 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/my-blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NodeJS - Simple CRUD API Development</title>
+      <link>http://localhost:1313/my-blog/posts/simple-crud-api-development/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/my-blog/posts/simple-crud-api-development/</guid>
+      
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;Hello my dear reader, I hope you are having a fantastic day and you are here to learn something new or hopefully to applause my journey of enhancing my skillset. Ideally both!&lt;/p&gt;
+&lt;p&gt;In today&amp;rsquo;s post, a simple CRUD API will be developed in NodeJS using a MongoDB as a database as instructed by &lt;em&gt;Coding Cleverly&lt;/em&gt; on &lt;em&gt;freeCodeCamp.org&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;initializing-the-project&#34;&gt;Initializing The Project&lt;/h1&gt;
+&lt;p&gt;The very first thing that it should be done is to create a &lt;code&gt;package.json&lt;/code&gt; file, which sets up a new &lt;code&gt;npm&lt;/code&gt; package.&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>CSS Layout - Grid: Mondrian Project</title>
       <link>http://localhost:1313/my-blog/posts/mondrian-project/</link>
